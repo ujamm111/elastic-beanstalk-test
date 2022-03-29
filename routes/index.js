@@ -16,11 +16,12 @@ router.get('/', function(req, res, next) {
 
   console.log('index listening log ' + 'Test Server 1 pid:' + process.pid + ', port:' + process.env.PORT+' ,ENV_MODE: ' +process.env.ENV_MODE + ' ,TMP_TEST_WORD: ' + process.env.TMP_TEST_WORD);
   res.render('index', { 
-    title: 'Test Server 1 pid:' + process.pid 
-    + ', port:' + process.env.PORT
-    +' ,ENV_MODE: ' +process.env.ENV_MODE + ' ,TMP_TEST_WORD: ' + process.env.TMP_TEST_WORD
-    + ' \n,env: ' + env
-    +' \n,config.username: ' + config.username + ' ,config.password: ' + config.password
+    title: `Test Server 1 pid: ${process.pid} 
+    , port: ${process.env.PORT}
+    ,ENV_MODE: ${process.env.ENV_MODE} ,TMP_TEST_WORD: ${process.env.TMP_TEST_WORD}
+    \n,env: ${env}
+    \n,config.username: ${config.username} ,config.password: ${config.password}
+    \n hello codeDeploy test`
   });
 });
 
